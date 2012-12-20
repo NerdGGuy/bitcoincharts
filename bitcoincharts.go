@@ -34,13 +34,13 @@ func (e BitcoinChartsError) Error() string {
 }
 
 type BitcoinCharts struct {
-	timeout  time.Duration
+	Timeout  time.Duration
 	lasttime time.Time
 	markets  []Market
 }
 
 func (bc *BitcoinCharts) getJSON() *BitcoinChartsError {
-	if time.Since(bc.lasttime) < bc.timeout {
+	if time.Since(bc.lasttime) < bc.Timeout {
 		return nil
 	}
 
