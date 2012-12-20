@@ -34,7 +34,7 @@ func (e BitcoinChartsError) Error() string {
 }
 
 type BitcoinCharts struct {
-	timeout  time.Duration
+	Timeout  time.Duration
 	lasttime time.Time
 	markets  []Market
 }
