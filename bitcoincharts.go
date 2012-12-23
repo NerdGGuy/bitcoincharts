@@ -85,6 +85,23 @@ func (bc *BitcoinCharts) GetMarket(symbol string) (*Market, *BitcoinChartsError)
 	return nil, nil
 }
 
+func (bc *BitcoinCharts) GetMarketsWithCurrency(currency string) (*[]Market, *BitcoinChartsError) {
+	err := bc.getJSON()
+	if err != nil {
+		return nil, err
+	}
+
+	markets := []Market{}
+	for _, market := range bc.markets {
+		//fmt.Printf("test: %+v", market)
+		switch market.Currency {
+		case currency:
+			markets = append(markets, market)
+		}
+	}
+	return &markets, nil
+}
+
 func (bc *BitcoinCharts) GetMarketSymbols() (*[]string, *BitcoinChartsError) {
 	err := bc.getJSON()
 	if err != nil {
