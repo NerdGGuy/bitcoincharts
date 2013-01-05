@@ -15,7 +15,7 @@ func NewBitcoinCharts() *BitcoinCharts {
 func GetMtgox(t *testing.T) *Market {
 	mtgoxUSD, err := bitcoin.GetMarket("mtgoxUSD")
 	if err != nil {
-		t.Fatalf("%s: %s", err.myError, err.theError)
+		t.Fatalf("%s: %s", err.MyError, err.TheError)
 	}
 	if mtgoxUSD.Latest_Trade == 0 {
 		t.Fatal("mtgoxUSD.Latest_Trade == nil")
@@ -48,7 +48,7 @@ func TestTimeout(t *testing.T) {
 func TestGetSymbols(t *testing.T) {
 	symbols, err := bitcoin.GetMarketSymbols()
 	if err != nil {
-		t.Fatalf("%s: %s", err.myError, err.theError)
+		t.Fatalf("%s: %s", err.MyError, err.TheError)
 	}
 
 	for _, symbol := range *symbols {
@@ -63,7 +63,7 @@ func TestGetSymbols(t *testing.T) {
 func TestGetMarketsWithCurrency(t *testing.T) {
 	markets, err := bitcoin.GetMarketsWithCurrency("USD")
 	if err != nil {
-		t.Fatalf("%s: %s", err.myError, err.theError)
+		t.Fatalf("%s: %s", err.MyError, err.TheError)
 	}
 
 	for _, market := range *markets {

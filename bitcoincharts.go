@@ -25,12 +25,12 @@ type Market struct {
 }
 
 type BitcoinChartsError struct {
-	myError  string
-	theError string
+	MyError  string
+	TheError string
 }
 
 func (e BitcoinChartsError) Error() string {
-	return fmt.Sprintf("%s --- %s", e.myError, e.theError)
+	return fmt.Sprintf("%s --- %s", e.MyError, e.TheError)
 }
 
 type BitcoinCharts struct {

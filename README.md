@@ -1,4 +1,4 @@
 bitcoincharts
 =============
 
-bitcoincharts.com json package for go
+Basic JSON access to bitcoincharts.com.
