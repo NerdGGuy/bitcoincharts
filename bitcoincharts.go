@@ -12,16 +12,16 @@ import (
 type Market struct {
 	Symbol          string
 	Currency        string
-	Bid             float32
-	Ask             float32
+	Bid             float64
+	Ask             float64
 	Latest_Trade    int
-	Open            float32
-	High            float32
-	Low             float32
-	Close           float32
-	Previous_Close  float32
-	Volume          float32
-	Currency_Volume float32
+	Open            float64
+	High            float64
+	Low             float64
+	Close           float64
+	Previous_Close  float64
+	Volume          float64
+	Currency_Volume float64
 }
 
 type BitcoinChartsError struct {
