@@ -29,7 +29,7 @@ type BitcoinChartsError struct {
 	TheError string
 }
 
-func (e BitcoinChartsError) Error() string {
+func (e *BitcoinChartsError) Error() string {
 	return fmt.Sprintf("%s --- %s", e.MyError, e.TheError)
 }
 
